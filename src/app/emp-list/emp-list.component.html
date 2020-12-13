@@ -1,0 +1,21 @@
+<h2>emp-list works!</h2>
+<button (click)="loadEmps()" style="margin-bottom: 10px;" class="btn btn-success">Load Employees</button>
+<h4 *ngIf="emps.length==0">There is no Employee</h4>
+<table *ngIf="emps.length>0" class="table table-striped table-bordered">
+     <thead>
+          <tr>
+               <th style="width: 50px;">Id</th>
+               <th>Name</th>
+               <th style="width: 70px;">Salary</th>
+               <th style="width: 150px;">Age</th>
+          </tr>
+     </thead>
+     <tbody>
+          <tr *ngFor="let emp of emps;let index = index">
+               <td>{{emp.empid}}</td>
+               <td>{{emp.name}}</td>
+               <td>{{emp.salary}}</td>
+               <td>{{emp.age}}</td>
+          </tr>
+     </tbody>
+</table>
